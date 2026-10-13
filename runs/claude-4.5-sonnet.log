@@ -1,0 +1,31 @@
+Excellent! Everything is working as expected. Let me create a quick summary of what was created:
+
+## Summary
+
+I've successfully created a duration utility module with the following files:
+
+### `duration.js`
+- **`parseDuration(str)`**: Parses duration strings like "1h30m", "2d 4h", "45s", "1.5h", "90m", "500ms"
+  - Supports units: d, h, m, s, ms
+  - Allows optional whitespace between parts
+  - Throws `TypeError` for non-strings
+  - Throws `RangeError` for empty or invalid input
+
+- **`formatDuration(ms)`**: Formats milliseconds into compact duration strings
+  - Returns format like "1h30m", "2d4h", "0ms"
+  - Skips zero parts
+  - Throws `RangeError` for negative or non-finite numbers
+
+### `duration.test.mjs`
+Comprehensive test suite using `node:test` covering:
+- Single unit parsing (500ms, 45s, 90m, 2h, 3d)
+- Decimal values (1.5h, 2.5m)
+- Compound durations (1h30m, 2d 4h)
+- Various whitespace handling
+- Error cases (TypeError, RangeError)
+- Round-trip consistency
+
+### `package.json`
+Configured with `"type": "module"` and test script.
+
+✅ All 14 tests pass successfully!

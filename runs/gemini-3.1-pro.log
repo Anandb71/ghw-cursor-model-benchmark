@@ -1,0 +1,7 @@
+I've created the requested files to parse and format durations:
+
+1. `duration.js` with `parseDuration(str)` and `formatDuration(ms)`.
+2. `duration.test.mjs` using `node:test` covering normal and error cases for both functions.
+3. `package.json` with `"type": "module"`.
+
+I ran the tests using `node --test duration.test.mjs`, and they all passed successfully. The solution handles everything requested, including skipping zero parts in the formatting, handling decimals appropriately, tolerating spaces during parsing, and properly throwing the requested Error types for invalid inputs.

@@ -1,0 +1,13 @@
+{
+  "name": "duration-utils",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Duration parsing and formatting utilities",
+  "main": "duration.js",
+  "scripts": {
+    "test": "node --test duration.test.mjs"
+  },
+  "keywords": ["duration", "time", "parse", "format"],
+  "author": "",
+  "license": "MIT"
+}

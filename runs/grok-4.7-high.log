@@ -1,0 +1,4 @@
+`parseDuration` and `formatDuration` are in `duration.js`, with `node:test` coverage in `duration.test.mjs`. `node --test duration.test.mjs` passed all 7 tests.
+
+- `parseDuration` sums `d`, `h`, `m`, `s`, and `ms` (including decimals and whitespace between parts) into milliseconds. Non-strings throw a `TypeError`. Empty or invalid strings such as `"abc"`, `"5x"`, and `"h1"` throw a `RangeError`.
+- `formatDuration` writes the compact form, largest unit first, and drops zero parts (`5400000` becomes `"1h30m"`, `0` becomes `"0ms"`). Negative or non-finite values throw a `RangeError`.

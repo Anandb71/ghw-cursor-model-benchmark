@@ -1,0 +1,4 @@
+Create `duration.js` (ES module, Node 20+, no dependencies) exporting `parseDuration(str)` and `formatDuration(ms)`.
+- `parseDuration` accepts strings like "1h30m", "2d 4h", "45s", "1.5h", "90m", "500ms" (units: d, h, m, s, ms; whitespace allowed between parts) and returns total milliseconds as a number. Throw a `TypeError` for non-strings and a `RangeError` for empty or invalid input (e.g. "abc", "5x", "h1").
+- `formatDuration(ms)` returns the compact form using d/h/m/s/ms, largest units first, skipping zero parts (e.g. 5400000 -> "1h30m", 0 -> "0ms"). Throw a `RangeError` for negative or non-finite numbers.
+Also write `duration.test.mjs` using `node:test` covering normal and error cases, and add a `package.json` with `"type": "module"`. Run `node --test duration.test.mjs` and fix any failures.
